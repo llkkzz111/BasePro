@@ -26,6 +26,21 @@ public class Constants {
     private float densityDpi;
     private float density;
 
+    private String baseUrl = "";
+    private String baseHttpUrl = baseUrl + "news/api/";
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
+
+    public String getBaseHttpUrl() {
+        return baseHttpUrl;
+    }
+
     public int getScreenWidth() {
         return screenWidth;
     }
@@ -57,7 +72,6 @@ public class Constants {
     public void setDensity(float density) {
         this.density = density;
     }
-
 
 
     public Context getmContext() {
