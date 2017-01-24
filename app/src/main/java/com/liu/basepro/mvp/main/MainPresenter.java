@@ -13,7 +13,7 @@ import retrofit2.Response;
  * Created by liuzhao on 17/1/23.
  */
 
-public class MainPresenter implements MainContract.Presenter {
+public class MainPresenter extends MainContract.Presenter {
     private ApiService service = null;
     private MainContract.View contractView;
 
