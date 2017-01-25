@@ -99,7 +99,6 @@ public abstract class BaseFragment<T extends IPresenter> extends Fragment {
 
     protected abstract int getlayoutId();
 
-    protected abstract void initInjector();
 
     protected abstract void initEventAndData();
 

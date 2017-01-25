@@ -1,9 +1,11 @@
 package com.liu.basepro.mvp.main;
 
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.liu.basepro.R;
 import com.liu.basepro.base.BaseFragment;
 import com.liu.basepro.http.entity.User;
@@ -30,12 +32,15 @@ public class MainFragment extends BaseFragment<MainPresenter> implements MainCon
 
     @OnClick(R.id.btn_get)
     public void onClick() {
-        mPresenter.getGithubUserInfo(etGithubName.getText().toString());
+        if (!TextUtils.isEmpty(etGithubName.getText().toString()))
+            mPresenter.getGithubUserInfo(etGithubName.getText().toString());
+        else
+            mPresenter.getGithubUserInfo("lckj686");
     }
 
     @Override
     public void showUser(User user) {
-        tvContent.setText(user.getName());
+        tvContent.setText(new Gson().toJson(user));
     }
 
     @Override
@@ -53,11 +58,6 @@ public class MainFragment extends BaseFragment<MainPresenter> implements MainCon
 
     }
 
-
-    @Override
-    protected void initInjector() {
-
-    }
 
     @Override
     protected void initEventAndData() {

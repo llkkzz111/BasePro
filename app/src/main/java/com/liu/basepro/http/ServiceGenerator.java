@@ -7,6 +7,7 @@ import java.io.IOException;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -15,7 +16,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ServiceGenerator {
-
+    static HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+    // interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//    httpClient.networkInterceptors().clear();
+//    httpClient.interceptors().add(interceptor);
     private static Retrofit.Builder builder =
             new Retrofit.Builder()
                     .baseUrl("https://api.github.com")
@@ -40,6 +44,7 @@ public class ServiceGenerator {
             }
         });
         httpClient.addNetworkInterceptor(new StethoInterceptor());
+        httpClient.addInterceptor(interceptor.setLevel(HttpLoggingInterceptor.Level.BODY));
         builder.client(httpClient.build());
         return builder.build().create(serviceClass);
     }
