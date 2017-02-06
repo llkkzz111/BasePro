@@ -1,8 +1,8 @@
-package com.liu.basepro.mvp.main;
+package com.liu.basepro.ui.main;
 
 import com.liu.basepro.http.entity.User;
-import com.liu.basepro.mvp.BasePresenter;
-import com.liu.basepro.mvp.BaseView;
+import com.liu.basepro.base.BasePresenter;
+import com.liu.basepro.base.BaseView;
 
 
 /**

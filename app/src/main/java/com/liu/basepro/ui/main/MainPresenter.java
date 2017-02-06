@@ -1,4 +1,4 @@
-package com.liu.basepro.mvp.main;
+package com.liu.basepro.ui.main;
 
 
 import com.liu.basepro.http.ApiService;

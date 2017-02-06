@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Window;
 
 import com.liu.basepro.AppManager;
-import com.liu.basepro.mvp.IPresenter;
 import com.liu.basepro.utils.LoadingDialog;
 
 import butterknife.ButterKnife;

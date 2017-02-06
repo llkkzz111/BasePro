@@ -1,4 +1,4 @@
-package com.liu.basepro.mvp;
+package com.liu.basepro.base;
 
 import android.content.Context;
 

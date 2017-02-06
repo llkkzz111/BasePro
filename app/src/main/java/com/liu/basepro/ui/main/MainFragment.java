@@ -1,4 +1,4 @@
-package com.liu.basepro.mvp.main;
+package com.liu.basepro.ui.main;
 
 import android.text.TextUtils;
 import android.widget.Button;
@@ -9,6 +9,8 @@ import com.google.gson.Gson;
 import com.liu.basepro.R;
 import com.liu.basepro.base.BaseFragment;
 import com.liu.basepro.http.entity.User;
+import com.liu.basepro.ui.main.MainContract;
+import com.liu.basepro.ui.main.MainPresenter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
