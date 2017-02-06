@@ -17,9 +17,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
     static HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-    // interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//    httpClient.networkInterceptors().clear();
-//    httpClient.interceptors().add(interceptor);
     private static Retrofit.Builder builder =
             new Retrofit.Builder()
                     .baseUrl("https://api.github.com")
@@ -36,8 +33,6 @@ public class ServiceGenerator {
             public okhttp3.Response intercept(Chain chain) throws IOException {
                 Request original = chain.request();
                 Request.Builder requestBuilder = original.newBuilder()
-//                        .addHeader("Authorization", authToken)
-//                        .addHeader("User-Agent", ApiUtils.USER_AGENT)
                         .method(original.method(), original.body());
                 Request request = requestBuilder.build();
                 return chain.proceed(request);

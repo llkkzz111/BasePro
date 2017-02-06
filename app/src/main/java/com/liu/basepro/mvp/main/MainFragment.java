@@ -54,12 +54,6 @@ public class MainFragment extends BaseFragment<MainPresenter> implements MainCon
     }
 
     @Override
-    public void setPresenter(MainContract.Presenter presenter) {
-
-    }
-
-
-    @Override
     protected void initEventAndData() {
         mPresenter = new MainPresenter(this);
     }
