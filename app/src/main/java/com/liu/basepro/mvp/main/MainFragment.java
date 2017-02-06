@@ -60,7 +60,7 @@ public class MainFragment extends BaseFragment<MainPresenter> implements MainCon
 
     @Override
     protected void lazyLoadData() {
-
+        mPresenter.getGithubUserInfo("llkkzz111");
     }
 
 
