@@ -7,7 +7,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.liu.basepro"
-        minSdkVersion 23
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -63,4 +63,6 @@ dependencies {
     //jpush
     compile 'cn.jiguang.sdk:jpush:3.0.1'
     compile 'cn.jiguang.sdk:jcore:1.1.0'
+    //recycleview 高级应用
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
 }
